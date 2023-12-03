@@ -8,7 +8,7 @@ resource "aws_instance" "frontend" {
 }
 resource "aws_route53_record" "frontend" {
   zone_id = "Z06742268XH94UQRFB14"
-  name    = "frontend"
+  name    = "frontend-dev"
   type    = "A"
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
@@ -24,7 +24,7 @@ resource "aws-instance" "backend" {
 }
 resource "aws_route53_record" "backend" {
   zone_id = "Z06742268XH94UQRFB14"
-  name    = "backend"
+  name    = "backend-dev"
   type    = "A"
   ttl     = 30
   records = [aws_instance.backend.private_ip]
@@ -36,11 +36,11 @@ resource "aws_instance" "mysql" {
     tags = {
         Name = "mysql"
     }
-    resource "aws_route53_record" "mysql" {
+}
+resource "aws_route53_record" "mysql" {
   zone_id = "Z06742268XH94UQRFB14"
-  name    = "mysql"
+  name    = "mysql-dev"
   type    = "A"
   ttl     = 30
   records = [aws_instance.mysql.private_ip]
-}
 }

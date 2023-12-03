@@ -15,7 +15,7 @@ output "fruitslist_output_values" {
 }
 
 variable "fruits_count_map" {
-    deafult = {
+    default = {
         apple = 100
         banana = 200
     }

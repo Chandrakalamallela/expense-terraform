@@ -14,7 +14,7 @@ resource "aws_route53_record" "frontend" {
   records = [aws_instance.frontend.private_ip]
 }
 
-resource "aws-instance" "backend" {
+resource "aws_instance" "backend" {
     ami = "03265a0778a880afb"
     instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-08f5f6ed60d31b69a"]

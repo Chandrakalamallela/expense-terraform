@@ -22,5 +22,5 @@ variable "fruits_count_map" {
 }
 
 output "frits_quantity_mapvalues" {
-    value=var.fruits_count_map["apple]
+    value=var.fruits_count_map["apple"]
 }

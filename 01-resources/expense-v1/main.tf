@@ -1,5 +1,5 @@
 resource "aws_instance" "frontend" {
-    ami = "03265a0778a880afb"
+    ami = "ami-03265a0778a880afb"
     instance_type= "t3.micro"
     vpc_security_group_ids = ["sg-08f5f6ed60d31b69a"]
     tags = {
@@ -15,7 +15,7 @@ resource "aws_route53_record" "frontend" {
 }
 
 resource "aws_instance" "backend" {
-    ami = "03265a0778a880afb"
+    ami = "ami-03265a0778a880afb"
     instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-08f5f6ed60d31b69a"]
     tags = {
@@ -30,7 +30,7 @@ resource "aws_route53_record" "backend" {
   records = [aws_instance.backend.private_ip]
 }
 resource "aws_instance" "mysql" {
-    ami = "03265a0778a880afb"
+    ami = "ami-03265a0778a880afb"
     instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-08f5f6ed60d31b69a"]
     tags = {

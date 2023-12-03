@@ -13,3 +13,14 @@ variable "fruits_list" {
 output "fruitslist_output_values" {
     value = var.fruits_list[2]
 }
+
+variable "fruits_count_map" {
+    deafult = {
+        apple = 100
+        banana = 200
+    }
+}
+
+output "frits_quantity_mapvalues" {
+    value=var.fruits_count_map["apple]
+}

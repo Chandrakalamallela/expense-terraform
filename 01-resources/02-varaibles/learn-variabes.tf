@@ -6,7 +6,7 @@ output "sample1" {
     value = var.sample
 }
 
-variables "fruits_list" {
+variable "fruits_list" {
     default = ["apple","orange","graps"]
 }
 

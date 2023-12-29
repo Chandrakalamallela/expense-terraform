@@ -14,7 +14,7 @@ components = {
     }
 
     mysql = {
-        name = "fromysqlntend"
+        name = "mysql"
         instance_type = "t3.micro"
     }
 } 

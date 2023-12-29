@@ -3,7 +3,7 @@ resource "aws_instance" "frontend" {
     instance_type = var.instance_type
     vpc_security_group_ids = var.sg_id
     tags = {
-        Name = "frontend-${var.env}"
+        Name = "frontend"
     }
 }
 resource "aws_route53_record" "frontend-dev" {
@@ -19,7 +19,7 @@ resource "aws_instance" "backend" {
     instance_type = var.instance_type
     vpc_security_group_ids = var.sg_id
     tags = {
-        Name = "backend-${var.env}"
+        Name = "backend"
     }
 }
 resource "aws_route53_record" "backend-dev" {
@@ -35,7 +35,7 @@ ami = var.ami
     instance_type = var.instance_type
     vpc_security_group_ids = var.sg_id
     tags = {
-        Name = "mysql-${var.env}"
+        Name = "mysql"
     }
 }
 

@@ -4,8 +4,9 @@ resource "aws_instance" "frontend" {
     instance_type = each.value["instance_type"]
     vpc_security_group_ids = var.sg_id
     tags = {
-        Name = "${each.value[name]}-${var.env}"
+        Name = "${each.value["name"]}-${var.env}"
     }
+}
 # }
 # resource "aws_route53_record" "frontend-dev" {
 # zone_id = var.zone_id
